@@ -1,3 +1,5 @@
+import GLightbox from 'glightbox';
+
 (function () {
     "use strict";
 
@@ -155,7 +157,7 @@
     /**
      * Intro type effect
      */
-
+    setTimeout(function(){
     const typed = select('.typed')
     if (typed) {
         let typed_strings = typed.getAttribute('data-typed-items')
@@ -168,13 +170,13 @@
             backDelay: 2000
         });
     }
-
+    }, 2000);
     /**
      * Initiate portfolio lightbox 
      */
-    // const portfolioLightbox = GLightbox({
-    //   selector: '.portfolio-lightbox'
-    // });
+    const portfolioLightbox = GLightbox({
+      selector: '.portfolio-lightbox'
+    });
 
     /**
      * Testimonials slider
@@ -243,3 +245,6 @@
     // new PureCounter();
 
 })()
+import $ from 'jquery';
+// create global $ and jQuery variables
+global.$ = global.jQuery = $;
